@@ -26,23 +26,23 @@ def similar():
     data = json.loads(request.data)
 
     result = 50
-    result_file = open("result.txt", "w")
-    result_file.write(str(result))
-    result_file.close()
+    # result_file = open("result.txt", "w")
+    # result_file.write(str(result))
+    # result_file.close()
 
     return json.dumps({"value": result}, cls=NumpyEncoder)
   
 @app.route("/getResult", methods=['get'])
 def getResult():
-    result = open("result.txt", "r")
-    result_data = result.read()
-    result.close()
+    # result = open("result.txt", "r")
+    # result_data = result.read()
+    # result.close()
 
-    result_file = open("result.txt", "w")
-    result_file.write("")
-    result_file.close()
+    # result_file = open("result.txt", "w")
+    # result_file.write("")
+    # result_file.close()
 
-    return result_data
+    return "50"
 
 # main driver function
 if __name__ == '__main__':
